@@ -74,10 +74,10 @@ run_model \
     "${BASE_LORA_SPACE_PROFILE:-off}"
 
 run_model \
-    "Int4 + LoRA variant (5 min, no TTT)" \
+    "Int5 blockwise + FP8 LoRA variant (5 min, no TTT)" \
     "${NEW_DIR}" \
     "${NEW_DIR}/train_gpt.py" \
-    "int4_lora16_5min_no_ttt_seed${SEED}" \
+    "int5_block_fp8_lora_5min_no_ttt_seed${SEED}" \
     "${NEW_BIGRAM_VOCAB_SIZE:-5120}" \
     "${NEW_VE_DIM:-288}" \
     "${NEW_LORA_SPACE_PROFILE:-expand_effective}"
